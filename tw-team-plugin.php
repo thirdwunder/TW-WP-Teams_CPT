@@ -123,7 +123,8 @@ if (is_admin()){
     'soundcloud' => array('title' => 'SoundCloud',      'desc'=>'Soundcloud public profile url'),
   );
   $team_meta->addText('tw_job_title_url',array('name'=> __('Title','tw-team-plugin')));
-  $team_meta->addText('tw_email_url',array('name'=> __('Email','tw-team-plugin')));
+  $team_meta->addText('tw_email',array('name'=> __('Email','tw-team-plugin')));
+  $team_meta->addText('tw_website',array('name'=> __('Website','tw-team-plugin')));
   foreach($social as $k=>$v){
     $team_meta->addText('tw_'.$k.'_url',array('name'=> __($v['title'],'tw-team-plugin'), 'desc'=>__($v['desc'],'tw-team-plugin')) );
   }
