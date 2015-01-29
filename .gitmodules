@@ -4,3 +4,6 @@
 [submodule "includes/Tax-Meta-Class"]
 	path = includes/Tax-Meta-Class
 	url = https://mohamedhamad@github.com/thirdwunder/Tax-Meta-Class.git
+[submodule "includes/Template-Loader"]
+	path = includes/Template-Loader
+	url = https://mohamedhamad@github.com/GaryJones/Gamajo-Template-Loader.git

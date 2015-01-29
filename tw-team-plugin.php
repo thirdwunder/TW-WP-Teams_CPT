@@ -56,6 +56,8 @@ $prefix = 'tw_';
 
 $team_slug = get_option('wpt_tw_team_slug') ? get_option('wpt_tw_team_slug') : "team-member";
 
+$team_search = get_option('wpt_tw_team_search') ? true : false;
+
 $team_category = (get_option('wpt_tw_team_category')=='on') ? true : false;
 $team_tag      = (get_option('wpt_tw_team_tag')=='on') ? true : false;
 
