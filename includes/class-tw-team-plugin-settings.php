@@ -180,6 +180,20 @@ class TW_Team_Plugin_Settings {
 					'default'		=> 'team-member-tag',
 					'placeholder' => 'team-member-tag',
 				),
+				array(
+					'id' 			=> 'tw_team_load_css',
+					'label'			=> __( 'Load Plugin CSS', 'tw-team-plugin' ),
+					'description'	=> __( 'Load the plugins internal css styles', 'tw-team-plugin' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'off'
+				),
+				array(
+					'id' 			=> 'tw_team_load_js',
+					'label'			=> __( 'Load Plugin JS', 'tw-team-plugin' ),
+					'description'	=> __( 'Load the plugins internal js', 'tw-team-plugin' ),
+					'type'			=> 'checkbox',
+					'default'		=> 'off'
+				),
 			)
 		);
 

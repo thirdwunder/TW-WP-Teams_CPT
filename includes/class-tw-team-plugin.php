@@ -155,8 +155,13 @@ class TW_Team_Plugin {
 	 * @return void
 	 */
 	public function enqueue_styles () {
-		wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend.css', array(), $this->_version );
-		wp_enqueue_style( $this->_token . '-frontend' );
+
+  	$load_css = get_option('wpt_tw_team_load_css')=='on' ? true : false;
+
+    if($load_css){
+      wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend.css', array(), $this->_version );
+    	wp_enqueue_style( $this->_token . '-frontend' );
+    }
 	} // End enqueue_styles ()
 
 	/**
@@ -166,8 +171,12 @@ class TW_Team_Plugin {
 	 * @return  void
 	 */
 	public function enqueue_scripts () {
-		wp_register_script( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'js/frontend' . $this->script_suffix . '.js', array( 'jquery' ), $this->_version );
-		wp_enqueue_script( $this->_token . '-frontend' );
+  	$load_js = get_option('wpt_tw_team_load_js')=='on' ? true : false;
+
+    if($load_js){
+  		wp_register_script( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'js/frontend' . $this->script_suffix . '.js', array( 'jquery' ), $this->_version );
+  		wp_enqueue_script( $this->_token . '-frontend' );
+		}
 	} // End enqueue_scripts ()
 
 	/**
